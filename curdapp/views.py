@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from curdapp.models import HallTicket
 def home(request):
     return render(request,'home.html')
 
@@ -17,3 +17,8 @@ def faqs(request):
 
 def search(request):
     return render(request,'search.html')
+
+def students(request):
+
+    students=HallTicket.objects.all()
+    return render(request,'students.html',{"students":students})
