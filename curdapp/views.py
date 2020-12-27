@@ -14,3 +14,6 @@ def contact(request):
 
 def faqs(request):
     return render(request,'faqs.html')
+
+def search(request):
+    return render(request,'search.html')
