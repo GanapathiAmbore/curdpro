@@ -19,6 +19,5 @@ def search(request):
     return render(request,'search.html')
 
 def students(request):
-
     students=HallTicket.objects.all()
     return render(request,'students.html',{"students":students})
